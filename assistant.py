@@ -31,7 +31,7 @@ def listen():
         voice = r.listen(source)
         print("Listening..... ")
         try:
-            listen_text = r.recognize_google_cloud(voice,language="en-in")
+            listen_text = r.recognize_google(voice,language="en-in")
             print(listen_text)
         except sr.UnknownValueError:
             listen_text = listen()
